@@ -18,10 +18,10 @@ nav ul li a {
     text-align: center;
 }
 
-/* nav ul li a:hover {
-    background-color: #111;
+nav ul li a:hover {
+    background-color: #926969;
 }
- */
+
 
 
  .hed
@@ -36,9 +36,42 @@ nav ul li a {
     width: 100%; /* Set a width */
     padding-left: auto; /* Center the element */
    
-    
-    /* padding-left: 50px;
-    padding-right:100px;
-    padding-top: 10px;
-    padding-bottom: 10px; */
  }
+
+ .skillsection {
+    color: white;
+    display: inline-block;
+    padding: 20px;
+}
+
+.skillsection ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox to align items horizontally */
+    flex-wrap: wrap; /* Allows wrapping if the items are too many */
+}
+
+.skillsection ul li {
+    margin-right: 15px; /* Space between the items */
+}
+
+
+.softskills {
+    color: white;
+    display: inline-block;
+    padding: 20px;
+    margin-left: 250px;
+}
+
+.softskills ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox to align items horizontally */
+    flex-wrap: wrap; /* Allows wrapping if the items are too many */
+}
+
+.softskills ul li {
+    margin-right: 15px; /* Space between the items */
+}
