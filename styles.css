@@ -1,0 +1,44 @@
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block; /* Ensure the list items appear in a single line */
+}
+
+nav ul li a {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* nav ul li a:hover {
+    background-color: #111;
+}
+ */
+
+
+ .hed
+ {
+    color: white;
+    text-align: center;
+
+ }
+
+ .me
+ {
+    width: 100%; /* Set a width */
+    padding-left: auto; /* Center the element */
+   
+    
+    /* padding-left: 50px;
+    padding-right:100px;
+    padding-top: 10px;
+    padding-bottom: 10px; */
+ }
