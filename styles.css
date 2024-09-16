@@ -1,3 +1,8 @@
+body {
+    background-color: black;
+    color: rgb(255, 255, 255); /* Change the text color to white */
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -27,47 +32,65 @@ nav ul li a:hover, nav ul li a:focus {
     text-decoration: underline;
 }
 
+.dropdown {
+    display: inline-block;
+}
 
- .hed
- {
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.hed {
     color: white;
     text-align: center;
+}
 
- }
-
- .me
- {
+.me {
     width: 100%; /* Set a width */
     padding-left: auto; /* Center the element */
-    transition:0.5s;
-   
- }
+    transition: 0.5s;
+}
 
-
- .me:hover
- {
+.me:hover {
     -webkit-text-stroke: 2px #000000;
     /* color: transparent; */
- }
+}
 
-
-
-
- .skillsection {
+.skillsection {
     color: white;
     display: inline-block;
     padding: 20px;
-    /* transition:0.5s; */
     width: 300px;
-    
-
 }
 
-.skillsection:hover
- {
+.skillsection:hover {
     -webkit-text-stroke: 0.5px #000000;
-    
- }
+}
 
 .skillsection ul {
     list-style-type: none;
@@ -75,29 +98,22 @@ nav ul li a:hover, nav ul li a:focus {
     margin: 0;
     display: flex; /* Flexbox to align items horizontally */
     flex-wrap: wrap; /* Allows wrapping if the items are too many */
-    
 }
-
-
 
 .skillsection ul li {
     margin-right: 15px; /* Space between the items */
 }
 
-
 .softskills {
     color: white;
     display: inline-block;
     padding: 20px;
-    /* margin-left: 250px; */
     width: 300px;
 }
 
-.softskills:hover
- {
+.softskills:hover {
     -webkit-text-stroke: 0.5px #000000;
-    
- }
+}
 
 .softskills ul {
     list-style-type: none;
@@ -111,37 +127,7 @@ nav ul li a:hover, nav ul li a:focus {
     margin-right: 15px; /* Space between the items */
 }
 
-.certifications:hover
- {
-    -webkit-text-stroke: 0.5px #000000;
-    
- }
-
-
 .certifications {
-    color: white;
-    display: inline-block;
-    /* padding: 20px; */
-    margin-left: 33%; /* Increased from 250px to 350px to move it more to the right */
-}
-
-
-
-.row {
-    display: flex;
-    justify-content: space-between; /* Distributes space evenly between the elements */
-    padding: 20px;
-    color: white;
-}
-
-.education:hover
- {
-    -webkit-text-stroke: 0.5px #000000;
-    
- }
-
-.certifications {
-   
     color: white;
     display: inline-block;
     padding: 20px;
@@ -149,14 +135,19 @@ nav ul li a:hover, nav ul li a:focus {
     width: 300px;
 }
 
-.education
-{
+.certifications:hover {
+    -webkit-text-stroke: 0.5px #000000;
+}
+
+.education {
     color: white;
     display: inline-block;
     padding: 20px;
-    /* transition:0.5s; */
     width: 300px;
-    
+}
+
+.education:hover {
+    -webkit-text-stroke: 0.5px #000000;
 }
 
 .education ul, .certifications ul {
@@ -171,75 +162,72 @@ h3 {
     margin-bottom: 10px; /* Space below the headers */
 }
 
-.back-video
-{
-    position:absolute;
+.back-video {
+    position: absolute;
     right: 0;
-    bottom:0;
-    z-index:-1;
-
-
+    bottom: 0;
+    z-index: -1;
 }
 
-@media (min-aspect-ratio:16/9)
-{
-    .back-video{
-        width:100%;
+@media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
         height: auto;
-
     }
 }
 
-@media (max-aspect-ratio:16/9)
-{
-    .back-video{
-        width:auto;
+@media (max-aspect-ratio: 16/9) {
+    .back-video {
+        width: auto;
         height: 100%;
-
     }
 }
 
-
-.projects
-{
-
-    color:white;
+.projects {
+    color: white;
     padding: 20px;
 }
 
-.projects:hover
- {
+.projects:hover {
     -webkit-text-stroke: 0.5px #000000;
-    
- }
+}
 
- .container-row
-    {
-        display: flex;
-        justify-content: space-around; /* Distributes space evenly between the elements */
-        padding: 20px;
-        color: white;
-        flex-wrap: wrap;
-        background-color: rgba(0, 0, 0, 0.5);
-       
-    }
+.container-row {
+    display: flex;
+    justify-content: space-around; /* Distributes space evenly between the elements */
+    padding: 20px;
+    color: white;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
-    .container-column
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        
-    }
+.container-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
 
-    .youtube-video {
-        text-align: center;
-        margin: 0 auto;
-    }
-    
-    .youtube-video iframe {
-        display: block;
-        margin: 0 auto;
-    }
-    
+.youtube-video {
+      margin-bottom: 20px;
+
+    font-size: 1.5em;    /* Increase the font size */
+}
+
+.vid {
+    display: flex;
+    justify-content: center; /* Centers the video horizontally */
+    padding: 20px;           /* Adds padding for spacing */
+}
+
+.video-wrapper {
+    display: flex;
+    justify-content: center; /* Centers the video horizontally */
+    width: 100%;
+}
+
+.video-wrapper iframe {
+    max-width: 100%;         /* Makes the video responsive */
+    width: 560px;            /* Sets a fixed width for larger screens */
+    height: 315px;           /* Sets the height */
+}
+
