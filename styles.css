@@ -58,6 +58,7 @@ nav ul li a:hover, nav ul li a:focus {
     display: inline-block;
     padding: 20px;
     /* transition:0.5s; */
+    width: 300px;
     
 
 }
@@ -88,7 +89,8 @@ nav ul li a:hover, nav ul li a:focus {
     color: white;
     display: inline-block;
     padding: 20px;
-    margin-left: 250px;
+    /* margin-left: 250px; */
+    width: 300px;
 }
 
 .softskills:hover
@@ -138,13 +140,31 @@ nav ul li a:hover, nav ul li a:focus {
     
  }
 
-.education, .certifications {
-    flex: 1; /* Each takes up equal amount of space */
-    margin-right: 20px; /* Optional, to give some space between the two columns */
+.certifications {
+   
+    color: white;
+    display: inline-block;
+    padding: 20px;
+    margin-left: 250px;
+    width: 300px;
+}
+
+.education
+{
+    color: white;
+    display: inline-block;
+    padding: 20px;
+    /* transition:0.5s; */
+    width: 300px;
+    
 }
 
 .education ul, .certifications ul {
-    list-style-type: none; /* Removes bullets from list */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox to align items horizontally */
+    flex-wrap: wrap; /* Allows wrapping if the items are too many */
 }
 
 h3 {
@@ -192,3 +212,34 @@ h3 {
     -webkit-text-stroke: 0.5px #000000;
     
  }
+
+ .container-row
+    {
+        display: flex;
+        justify-content: space-around; /* Distributes space evenly between the elements */
+        padding: 20px;
+        color: white;
+        flex-wrap: wrap;
+        background-color: rgba(0, 0, 0, 0.5);
+       
+    }
+
+    .container-column
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+
+    .youtube-video {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .youtube-video iframe {
+        display: block;
+        margin: 0 auto;
+    }
+    
