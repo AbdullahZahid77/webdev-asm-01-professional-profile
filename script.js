@@ -158,3 +158,90 @@ function changeLanguage(lang) {
         console.error('Language not supported:', lang);
     }
 }
+
+
+
+
+
+// JavaScript Object for User Data
+const userData = {
+    name: "Abdullah Zahid",
+    title: "Deep Learning Engineer",
+    linkedin: "https://www.linkedin.com/in/abdullah-zahid-410874229/",
+    github: "https://github.com/AbdullahZahid77",
+    education: [
+        { degree: "BSCS", university: "Information Technology University" },
+        { degree: "A-Levels", school: "New Middle East International School" }
+    ],
+    certifications: [
+        { title: "Google Data Analytics Certificate" },
+        { title: "IBM Data Analysis with Python" },
+        { title: "OpenCVUniversity OpenCV Bootcamp" },
+        { title: "Kaggle- Machine Learning" }
+    ],
+    skills: [
+        "c++", "python", "pytorch", "scikit-learn", "seaborn", 
+        "matplotlib", "numpy", "opencv", "shapely", "contextily"
+    ],
+    softSkills: [
+        "Team Work", "Time Management", "Problem Solving", "Adaptability"
+    ],
+    projects: [
+        "Enhancing Military Operations and Logistics with Geospatial Analysis: Selected Standout Project",
+        "NASDAQ Price Prediction with Machine Learning: Stock Price Movement Prediction",
+        "Real-Time Color Detector using HSV Colorspace- Computer Vision"
+    ],
+    languages: ["English", "Urdu", "Arabic", "French"],
+    mostViewedVideo: "https://www.youtube.com/embed/GNDO2G6YySA"
+};
+
+// Populate HTML using JavaScript
+document.addEventListener('DOMContentLoaded', () => {
+    // Populating basic info
+    document.querySelector('.hed').textContent = userData.name;
+    document.querySelector('.me h2').textContent = userData.title;
+    
+    // Setting up social links
+    document.querySelector('.social[href*="linkedin"]').href = userData.linkedin;
+    document.querySelector('.social[href*="github"]').href = userData.github;
+
+    // Populating Education
+    let educationHTML = "";
+    userData.education.forEach(item => {
+        educationHTML += `<li>${item.university} (${item.degree})</li>`;
+    });
+    document.querySelector('.education ul').innerHTML = educationHTML;
+
+    // Populating Certifications
+    let certificationsHTML = "";
+    userData.certifications.forEach(cert => {
+        certificationsHTML += `<li>${cert.title}</li>`;
+    });
+    document.querySelector('.certifications ul').innerHTML = certificationsHTML;
+
+    // Populating Skills
+    let skillsHTML = "";
+    userData.skills.forEach(skill => {
+        skillsHTML += `<li>${skill}</li>`;
+    });
+    document.querySelector('.skillsection ul').innerHTML = skillsHTML;
+
+    // Populating Soft Skills
+    let softSkillsHTML = "";
+    userData.softSkills.forEach(skill => {
+        softSkillsHTML += `<li>${skill}</li>`;
+    });
+    document.querySelector('.softskills ul').innerHTML = softSkillsHTML;
+
+    // Populating Projects
+    let projectsHTML = "";
+    userData.projects.forEach(project => {
+        projectsHTML += `<li>${project}</li>`;
+    });
+    document.querySelector('.projects ul').innerHTML = projectsHTML;
+
+    // Setting up the YouTube video
+    document.querySelector('.youtube-video iframe').src = userData.mostViewedVideo;
+});
+
+
