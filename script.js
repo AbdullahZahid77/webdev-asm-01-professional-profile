@@ -1,4 +1,5 @@
 // Define translations for each language
+// Define translations for each language
 const translations = {
     en: {
         home: "Home",
@@ -162,86 +163,86 @@ function changeLanguage(lang) {
 
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const data = {
+        "personalInfo": {
+            "name": "Abdullah Zahid",
+            "role": "Deep Learning Engineer"
+        },
+        "skills": ["c++", "python", "pytorch", "scikit-learn", "seaborn", "matplotlib", "numpy", "opencv", "shapely", "contextily"],
+        "softSkills": ["Team Work", "Time Management", "Problem Solving", "Adaptability"],
+        "education": [
+            "Information Technology University (BSCS)",
+            "New Middle East International School (A-Levels)"
+        ],
+        "certifications": [
+            "Google Data Analytics Certificate",
+            "IBM Data Analysis with Python",
+            "OpenCVUniversity OpenCV Bootcamp",
+            "Kaggle- Machine Learning"
+        ],
+        "projects": [
+            {
+                "title": "Enhancing Military Operations and Logistics with Geospatial Analysis",
+                "description": "Selected Standout Project"
+            },
+            {
+                "title": "NASDAQ Price Prediction with Machine Learning",
+                "description": "Stock Price Movement Prediction"
+            },
+            {
+                "title": "Real-Time Color Detector using HSV Colorspace",
+                "description": "Computer Vision"
+            }
+        ],
+        "socialMediaLinks": {
+            "linkedin": "https://www.linkedin.com/in/abdullah-zahid-410874229/",
+            "github": "https://github.com/AbdullahZahid77"
+        },
+        "youtubeVideo": "https://www.youtube.com/embed/GNDO2G6YySA"
+    };
 
-// JavaScript Object for User Data
-const userData = {
-    name: "Abdullah Zahid",
-    title: "Deep Learning Engineer",
-    linkedin: "https://www.linkedin.com/in/abdullah-zahid-410874229/",
-    github: "https://github.com/AbdullahZahid77",
-    education: [
-        { degree: "BSCS", university: "Information Technology University" },
-        { degree: "A-Levels", school: "New Middle East International School" }
-    ],
-    certifications: [
-        { title: "Google Data Analytics Certificate" },
-        { title: "IBM Data Analysis with Python" },
-        { title: "OpenCVUniversity OpenCV Bootcamp" },
-        { title: "Kaggle- Machine Learning" }
-    ],
-    skills: [
-        "c++", "python", "pytorch", "scikit-learn", "seaborn", 
-        "matplotlib", "numpy", "opencv", "shapely", "contextily"
-    ],
-    softSkills: [
-        "Team Work", "Time Management", "Problem Solving", "Adaptability"
-    ],
-    projects: [
-        "Enhancing Military Operations and Logistics with Geospatial Analysis: Selected Standout Project",
-        "NASDAQ Price Prediction with Machine Learning: Stock Price Movement Prediction",
-        "Real-Time Color Detector using HSV Colorspace- Computer Vision"
-    ],
-    languages: ["English", "Urdu", "Arabic", "French"],
-    mostViewedVideo: "https://www.youtube.com/embed/GNDO2G6YySA"
-};
+    document.getElementById('person-name').textContent = data.personalInfo.name;
+    document.getElementById('person-role').textContent = data.personalInfo.role;
+    document.getElementById('linkedin').setAttribute('href', data.socialMediaLinks.linkedin);
+    document.getElementById('github').setAttribute('href', data.socialMediaLinks.github);
 
-// Populate HTML using JavaScript
-document.addEventListener('DOMContentLoaded', () => {
-    // Populating basic info
-    document.querySelector('.hed').textContent = userData.name;
-    document.querySelector('.me h2').textContent = userData.title;
-    
-    // Setting up social links
-    document.querySelector('.social[href*="linkedin"]').href = userData.linkedin;
-    document.querySelector('.social[href*="github"]').href = userData.github;
-
-    // Populating Education
-    let educationHTML = "";
-    userData.education.forEach(item => {
-        educationHTML += `<li>${item.university} (${item.degree})</li>`;
+    const skillsContainer = document.getElementById('skills-list');
+    data.skills.forEach(skill => {
+        let listItem = document.createElement('li');
+        listItem.textContent = skill;
+        skillsContainer.appendChild(listItem);
     });
-    document.querySelector('.education ul').innerHTML = educationHTML;
 
-    // Populating Certifications
-    let certificationsHTML = "";
-    userData.certifications.forEach(cert => {
-        certificationsHTML += `<li>${cert.title}</li>`;
+    const softSkillsContainer = document.getElementById('softskills-list');
+    data.softSkills.forEach(skill => {
+        let listItem = document.createElement('li');
+        listItem.textContent = skill;
+        softSkillsContainer.appendChild(listItem);
     });
-    document.querySelector('.certifications ul').innerHTML = certificationsHTML;
 
-    // Populating Skills
-    let skillsHTML = "";
-    userData.skills.forEach(skill => {
-        skillsHTML += `<li>${skill}</li>`;
+    const educationContainer = document.getElementById('education-list');
+    data.education.forEach(edu => {
+        let listItem = document.createElement('li');
+        listItem.textContent = edu;
+        educationContainer.appendChild(listItem);
     });
-    document.querySelector('.skillsection ul').innerHTML = skillsHTML;
 
-    // Populating Soft Skills
-    let softSkillsHTML = "";
-    userData.softSkills.forEach(skill => {
-        softSkillsHTML += `<li>${skill}</li>`;
+    const certificationsContainer = document.getElementById('certifications-list');
+    data.certifications.forEach(cert => {
+        let listItem = document.createElement('li');
+        listItem.textContent = cert;
+        certificationsContainer.appendChild(listItem);
     });
-    document.querySelector('.softskills ul').innerHTML = softSkillsHTML;
 
-    // Populating Projects
-    let projectsHTML = "";
-    userData.projects.forEach(project => {
-        projectsHTML += `<li>${project}</li>`;
+    const projectsContainer = document.getElementById('projects-list');
+    data.projects.forEach(proj => {
+        let projItem = document.createElement('div');
+        projItem.innerHTML = `<h4>${proj.title}</h4><p>${proj.description}</p>`;
+        projectsContainer.appendChild(projItem);
     });
-    document.querySelector('.projects ul').innerHTML = projectsHTML;
 
-    // Setting up the YouTube video
-    document.querySelector('.youtube-video iframe').src = userData.mostViewedVideo;
+    document.getElementById('youtube-frame').setAttribute('src', data.youtubeVideo);
 });
 
 

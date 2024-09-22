@@ -5,14 +5,12 @@
     <title>Professional CV</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="styles.css">
-    <!-- Latest compiled and minified CSS -->
-   
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="https://www.linkedin.com/in/abdullah-zahid-410874229/" class="social" target="_blank">Linkedin</a></li>
-            <li><a href="https://github.com/AbdullahZahid77" class="social" target="_blank">Github</a></li>
+            <li><a href="#" id="linkedin" class="social" target="_blank">Linkedin</a></li>
+            <li><a href="#" id="github" class="social" target="_blank">Github</a></li>
             <li><a href="#" id="home">Home</a></li>
             <li><a href="#" id="contact">Contact</a></li>
             <li class="dropdown">
@@ -32,66 +30,38 @@
     </video>
 
     <div class="me">
-        <h1 class="hed">Abdullah Zahid</h1>
-        <h2 class="hed">Deep Learning Engineer</h2>
+        <h1 class="hed" id="person-name"></h1>
+        <h2 class="hed" id="person-role"></h2>
     </div>
 
     <div class="container-row">
         <div class="skillsection">
             <h3 id="skills-title">Skills:</h3>
-            <ul>
-                <li>c++</li>
-                <li>python</li>
-                <li>pytorch</li>
-                <li>scikit-learn</li>
-                <li>seaborn</li>
-                <li>matplotlib</li>
-                <li>numpy</li>
-                <li>opencv</li>
-                <li>shapely</li>
-                <li>contextily</li>
-            </ul>
+            <ul id="skills-list"></ul>
         </div>
         <div class="softskills">
             <h3 id="softskills-title">Soft Skills:</h3>
-            <ul>
-                <li>Team Work</li>
-                <li>Time Management</li>
-                <li>Problem Solving</li>
-                <li>Adaptability</li>
-            </ul>
+            <ul id="softskills-list"></ul>
         </div>
     </div>
 
     <div class="container-row">
         <div class="education">
             <h3 id="education-title">Education:</h3>
-            <ul>
-                <li>Information Technology University (BSCS)</li>
-                <li>New Middle East International School (A-Levels)</li>
-            </ul>
+            <ul id="education-list"></ul>
         </div>
         <div class="certifications">
             <h3 id="certifications-title">Certifications:</h3>
-            <ul>
-                <li>Google Data Analytics Certificate</li>
-                <li>IBM Data Analysis with Python</li>
-                <li>OpenCVUniversity OpenCV Bootcamp</li>
-                <li>Kaggle- Machine Learning</li>
-            </ul>
+            <ul id="certifications-list"></ul>
         </div>
     </div>
 
     <div class="projects">
         <h3 id="projects-title">Projects:</h3>
-        <ul>
-            <li>Enhancing Military Operations and Logistics with Geospatial Analysis: Selected Standout Project</li>
-            <li>NASDAQ Price Prediction with Machine Learning: Stock Price Movement Prediction</li>
-            <li>Real-Time Color Detector using HSV Colorspace- Computer Vision</li>
-        </ul>
+        <div id="projects-list"></div>
         <div class="youtube-video">
             <h3>Most Viewed video from my youtube channel:</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/GNDO2G6YySA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="youtube-frame" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
